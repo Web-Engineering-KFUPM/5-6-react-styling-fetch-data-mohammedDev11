@@ -32,8 +32,8 @@ LAB SETUP INSTRUCTIONS
 5. Link Bootstrap CSS to your React project:
    Open the file: public/index.html
    Inside the <head> tag, add this line:
-      <link 
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
          rel="stylesheet"
       >
 
@@ -231,7 +231,7 @@ export default function App() {
   return (
     <div className="app">
       {/* TODO 1.1: Set header className EXACTLY as in lab instructions */}
-      <header className="">
+      <header className="bg-primary text-white py-3 mb-4 shadow">
         <Container>
           <h1 className="h2 mb-0">User Management Dashboard</h1>
           <p className="mb-0 opacity-75">Search users and view details</p>
@@ -250,11 +250,15 @@ export default function App() {
           <UserList users={filteredUsers} onUserClick={handleUserClick} />
         )}
 
-        <UserModal show={showModal} user={selectedUser} onHide={handleCloseModal} />
+        <UserModal
+          show={showModal}
+          user={selectedUser}
+          onHide={handleCloseModal}
+        />
       </Container>
 
       {/* TODO 1.1: Set footer className EXACTLY as in lab instructions */}
-      <footer className="">
+      <footer className="bg-light py-4 mt-5">
         <Container>
           <small className="text-muted">SWE 363 — React Lab</small>
         </Container>
